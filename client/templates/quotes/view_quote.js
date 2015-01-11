@@ -5,9 +5,10 @@ Template.viewQuote.helpers({
 });
 
 Template.viewQuote.events({
-	'click #showQuote': function(e) {
-    e.preventDefault();
-    Router.go('viewQuote');
+	'click button': function(e) {
+		alert('click');
+    // e.preventDefault();
+    // Router.go('viewQuote');
     // return Quotes.find();
   }
 });
