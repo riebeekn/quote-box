@@ -1,14 +1,12 @@
-Template.viewQuote.helpers({  
-  quotes: function() {    
-    return Quotes.find();  
+Template.viewQuote.helpers({ 
+	theQuote: function () {
+    return Quotes.findOne();
   }
 });
 
 Template.viewQuote.events({
 	'click button': function(e) {
-		alert('click');
-    // e.preventDefault();
-    // Router.go('viewQuote');
-    // return Quotes.find();
+		e.preventDefault();
+		getQuote();
   }
 });
