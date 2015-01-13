@@ -1,7 +1,7 @@
 <template name="viewQuote">
 	<div class="row quote-button">
 		<div class="col-md-12">
-			<button class="btn btn-primary">Show me another quote!</button>
+			<a id="showQuote" href="#" class="btn btn-primary btn-lg">Show me another quote!</a>
 		</div>
 	</div>
 	<div class="row">
@@ -9,6 +9,11 @@
 			<div class="jumbotron">
 				{{> quote theQuote}}
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<a id="addQuote" href="{{pathFor 'addQuote'}}">Add your own quote</a>
 		</div>
 	</div>
 </template>

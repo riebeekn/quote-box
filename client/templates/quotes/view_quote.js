@@ -5,7 +5,7 @@ Template.viewQuote.helpers({
 });
 
 Template.viewQuote.events({
-	'click button': function(e) {
+	'click #showQuote': function(e) {
 		e.preventDefault();
 		getQuote();
   }
