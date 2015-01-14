@@ -1,3 +1,12 @@
-.quote-button {
+.view-quote {
+	text-align: center;
+}
+
+.view-quote a {
 	margin-top: 25px;
+}
+
+.view-quote h2 {
+	font-size: 60px;
+  font-weight: 100;
 }

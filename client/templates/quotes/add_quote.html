@@ -1,11 +1,28 @@
 <template name="addQuote">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-11 col-md-offset-1">
 			<h1>Add your quote</h1>
 		</div>
 	</div>
+
+	<form class="col-md-11 col-md-offset-1">
+    <div class="form-group">
+      <label class="control-label" for="text">Text</label>
+      <div class="controls">
+        <input name="text" id="text" type="text" value="" placeholder="Your Quote" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="author">Author</label>
+      <div class="controls">
+        <input name="author" id="author" type="text" value="" placeholder="Author" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>	
+	</form>
+
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-11 col-md-offset-1">
 			<a id="addQuote" href="{{pathFor 'viewQuote'}}">View some more quotes</a>
 		</div>
 	</div>
