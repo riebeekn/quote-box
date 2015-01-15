@@ -1,4 +1,4 @@
-Template.name.rendered = function () {
+Template.addQuote.rendered = function () {
   $('#addQuote').parsley({trigger: 'change'});
 }
 
