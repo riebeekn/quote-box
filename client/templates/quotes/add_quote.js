@@ -12,9 +12,12 @@ Template.addQuote.events({
     };
 
     Meteor.call('quoteInsert', quote, function(error, result) {    
-    	if (error)        
-    		throw error;     
-  		
+    	if (error) {
+        toastr.error("Failed to insert your quote, please try again.");
+    		throw error;
+      }     
+
+  		toastr.success('Thank you, your quote has been added!');
     	Router.go('viewQuote');      
     });
   }
