@@ -1,6 +1,9 @@
 Template.viewQuote.helpers({ 
 	theQuote: function () {
     return Quotes.findOne();
+  },
+  quoteCount: function() {
+  	return Counts.get('quoteCount');
   }
 });
 
