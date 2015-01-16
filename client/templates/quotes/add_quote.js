@@ -13,7 +13,11 @@ Template.addQuote.events({
 
     Meteor.call('quoteInsert', quote, function(error, result) {    
     	if (error) {
-        toastr.error("Failed to insert your quote, please try again.");
+        if (error.error === 'DUPLICATE-POST') {
+          toastr.warning(error.reason);
+        } else {
+          toastr.error("Failed to insert your quote, please try again.");
+        }
     		throw error;
       }     
 
