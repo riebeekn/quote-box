@@ -5,6 +5,7 @@ Template.addQuote.rendered = function () {
 Template.addQuote.events({
   'submit form': function(e) {
     e.preventDefault();
+    toastr.clear();
 
     var quote = {
       quote: $(e.target).find('[name=quote]').val(),

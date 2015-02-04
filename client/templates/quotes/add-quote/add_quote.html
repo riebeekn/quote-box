@@ -10,18 +10,18 @@
       <div class="form-group">
         <label class="control-label" for="quote">Quote</label>
         <div class="controls">
-          <input name="quote" id="quote" type="text" value="" placeholder="Quote" class="form-control" required />
+          <input name="quote" id="quote" type="text" value="" placeholder="Quote" class="form-control" data-parsley-group="signup" required data-parsley-error-message="Quote can't be empty."/>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label" for="author">Author</label>
         <div class="controls">
-          <input name="author" id="author" type="text" value="" placeholder="Author" class="form-control" required />
+          <input name="author" id="author" type="text" value="" placeholder="Author" class="form-control" required data-parsley-error-message="Author can't be empty."/>
         </div>
       </div>
-      <input type="submit" value="Submit" class="btn btn-primary"/>	
+      <input id="addQuoteBtn" type="submit" value="Submit" class="btn btn-primary"/>	
 
-    	<div class="row" id="viewQuote">
+    	<div class="row">
     		<div class="col-md-12">
     			<a id="viewQuote" href="{{pathFor 'viewQuote'}}">View some more quotes</a>
     		</div>
