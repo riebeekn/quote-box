@@ -2,7 +2,7 @@ describe("attempt to add a duplicate quote", function() {
 
 	var anExistingQuote;
 	var initialQuoteCount;
-
+	
 	beforeEach(function (done) {
     Router.go('home');
     Tracker.afterFlush(function(){
