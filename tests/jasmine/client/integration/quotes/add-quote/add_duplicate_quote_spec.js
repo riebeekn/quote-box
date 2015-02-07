@@ -1,24 +1,9 @@
 describe("attempt to add a duplicate quote", function() {
 
-	var anExistingQuote;
 	var initialQuoteCount;
-
-	beforeEach(function (done) {
-    Router.go('home');
-    Tracker.afterFlush(function(){
-      done();
-    });
-  });
-
-	beforeEach(waitForRouter);
 
 	beforeEach(function(done) {
 		initialQuoteCount = Counts.get('quoteCount');
-		done();
-	});
-
-	beforeEach(function(done) {
-		anExistingQuote = $('#quoteText').text();
 		done();
 	});
 
@@ -32,7 +17,10 @@ describe("attempt to add a duplicate quote", function() {
 	beforeEach(waitForRouter);
 
 	beforeEach(function(done) {
-		$('#quote').val(anExistingQuote);
+		// try to add a quote from our fixtures.js file
+		// should fail as the quote will already be loaded
+		// from the fixture file on start-up
+		$('#quote').val("Strive not to be a success, but rather to be of value.");
 		$('#author').val('Bill Baggins');
 		
 		$('#addQuoteBtn').click();

@@ -12,7 +12,7 @@ describe("view quote", function() {
   describe("page", function() {
 	  
 	  it("should have the right title", function(done) {
-	  	expect($('title').text()).toEqual('Quote Box');
+	  	expect($('title').text()).toEqual('Quote Box - Home');
 	  	done();
 	  });
 
@@ -31,7 +31,7 @@ describe("view quote", function() {
 	  	Meteor.setTimeout(function(){
 	  		expect($('#quoteText').text()).toBeTruthy(); // i.e. not empty
 		  	done();
-		  }, 100);
+		  }, 5);
 	  });
 
 	  it("should show the number of quotes in the box", function(done) {

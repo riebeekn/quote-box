@@ -40,6 +40,7 @@ describe("add quote validation", function() {
   it("should show validation when Quote is missing", function(done) {
     resetFields();
     setAuthor();
+    $('#addQuoteBtn').click();
   	Meteor.setTimeout(function(){
 	  	expect($('.parsley-custom-error-message').text()).toEqual("Quote can't be empty.");
       done();
