@@ -13,8 +13,10 @@ describe("clicking show quote button", function() {
   beforeEach(waitForRouter);
 
   beforeEach(function(done) {
-  	initialQuote = $('#quoteText').html();
-  	done();
+    Meteor.setTimeout(function() {
+    	initialQuote = $('#quoteText').html();
+    	done();
+    }, 300);
   });
 
   it("should display the next quote", function(done) {

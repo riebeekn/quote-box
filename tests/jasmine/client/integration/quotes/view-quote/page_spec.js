@@ -27,11 +27,7 @@ describe("view quote", function() {
 	  });
 
 	  it("should show a quote", function(done) {
-	  	// need to set a timeout for the quote to load
-	  	Meteor.setTimeout(function(){
-	  		expect($('#quoteText').text()).toBeTruthy(); // i.e. not empty
-		  	done();
-		  }, 5);
+	  	Assert.isNotNull('#quoteText', done, 5);
 	  });
 
 	  it("should show the number of quotes in the box", function(done) {

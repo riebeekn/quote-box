@@ -28,6 +28,7 @@ describe("add quote", function() {
 	beforeEach(waitForRouter);
 
 	it("should successfully add a quote", function(done) {
+		// can't use assert helper as Counts.get needs to be in the timout block
 		Meteor.setTimeout(function() {
 			expect(initialQuoteCount + 1).toEqual(Counts.get('quoteCount'));
 			done();
@@ -35,9 +36,6 @@ describe("add quote", function() {
 	});
 
 	it("should display a success message", function(done) {
-		Meteor.setTimeout(function() {
-			expect($('.toast-message').text()).toEqual("Thank you, your quote has been added!");
-			done();
-		}, 500);
+		Assert.areEqual('.toast-message', 'Thank you, your quote has been added!', done, 500);
 	});
 });

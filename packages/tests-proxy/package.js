@@ -7,6 +7,7 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.use("coffeescript", ["client", "server"]);
+	api.add_files("tests/jasmine/client/integration/_assert_helper.js",["client"]);
 	api.add_files("tests/jasmine/client/integration/_wait_for_router_helper.js",["client"]);
 	api.add_files("tests/jasmine/client/integration/navigation_spec.js",["client"]);
 	api.add_files("tests/jasmine/client/integration/quotes/add-quote/add_duplicate_quote_spec.js",["client"]);
