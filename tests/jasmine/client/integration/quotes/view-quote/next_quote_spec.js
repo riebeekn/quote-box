@@ -1,4 +1,4 @@
-describe("view quote", function() {
+describe("clicking show quote button", function() {
 
 	var initialQuote;
 	var nextQuote;
@@ -13,23 +13,21 @@ describe("view quote", function() {
   beforeEach(waitForRouter);
 
   beforeEach(function(done) {
-  	initialQuote = $('#quoteText').html();
-  	done();
-  });
-
-  beforeEach(function(done) {
-  	$('#showQuote').click();
-  	done();
+    Meteor.setTimeout(function() {
+    	initialQuote = $('#quoteText').html();
+    	done();
+    }, 300);
   });
 
   it("should display the next quote", function(done) {
-
-	  Meteor.setTimeout(function(){
+    $('#showQuote').click();
+	  
+    Meteor.setTimeout(function(){
   		nextQuote = $('#quoteText').html();
   		expect(initialQuote).toBeTruthy(); // i.e. not empty
   		expect(nextQuote).toBeTruthy(); // i.e. not empty
   		expect(nextQuote).not.toEqual(initialQuote);
 	  	done();
-	  }, 100);
+	  }, 300);
   });
 });
